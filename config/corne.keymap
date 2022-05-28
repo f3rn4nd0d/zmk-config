@@ -33,7 +33,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // |(SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT)|
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+//                    | GUI | LWR | SPC |   | ENT | RSE  |BKSP |
                         bindings = <
 &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I &kp O &kp P &kp BSPC
 &kp LCTRL &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
@@ -76,14 +76,14 @@
                     label = "ADJ";
 // -----------------------------------------------------------------------------------------
 // |  ESC |     |     |     |     |     |   |     |     |     |     |     |      |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |volDN|volUP|     |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp ESC &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &trans
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans
    &kp RA(LBKT) &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &kp RA(RBKT)
-                          	        &kp LGUI  &trans &kp SPACE                   &kp RET &trans  &kp RALT
+                          	        &kp LGUI  &trans &kp SPACE                   &kp RET &trans &kp RALT
                         >;
                 };
    };
