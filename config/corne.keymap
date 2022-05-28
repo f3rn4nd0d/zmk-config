@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 // Layer aliases
-#define default 0
-#define lower 1
-#define raise 2
-#define adjust 3
+#define DEF 0
+#define LOW 1
+#define RAI 2
+#define ADJ 3
 
 / {
     conditional_layers {
@@ -28,7 +28,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                      label = "default";
+                      label = "DEF";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -42,7 +42,7 @@
                         >;
                 };
                 lower_layer {
-                    label = "lower";
+                    label = "LOW";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -57,7 +57,7 @@
                 };
 
                 raise_layer {
-                     label = "raise";
+                     label = "RAI";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -73,7 +73,7 @@
 
         
                 adjust_layer {
-                    label = "adjust";
+                    label = "ADJ";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
