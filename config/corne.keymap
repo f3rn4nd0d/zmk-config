@@ -47,7 +47,7 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |      | F1  | F2  | F3  | F4  | F5  |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT | F6  | F7  | F8  | F9  | F10 |   | F11 | F12 |     |     |     |      |
+// |  <   | F6  | F7  | F8  | F9  | F10 |   | F11 | F12 |     |     |     |   >  |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
@@ -62,28 +62,28 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |PWROFF|    |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// |   {  |PWROFF|    |     |     |     |   |  _  |  +  |  {  |  }  | "|" |   }  |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans &trans &trans &trans &trans                          &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-   &kp RA(APOSTROPHE) &ext_power EP_OFF &trans &trans &trans &trans      &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp RA(BSLH)
-                    	     &kp LGUI &trans &kp SPACE                   &kp RET &trans &kp RALT
+   &kp ESC &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT           &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans &trans &trans &trans &trans                  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+   &kp RA(APOSTROPHE) &trans &trans &trans &trans &trans         &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp RA(BSLH)
+                    	     &kp LGUI &trans &kp SPACE           &kp RET &trans &kp RALT
                         >;
                 };
                 
                 adjust_layer {
                     label = "ADJ";
 // -----------------------------------------------------------------------------------------
-// |  ESC |     |     |     |     |     |   |     |     |     |     |     |      |
+// |  ESC |     |     |     |     |     |   |     |     |     |     |     |powerOFF|
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |volDN|volUP|     |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+// | [    |     |     |     |     |     |   |     |     |     |     |     |  ]   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &trans
+   &kp ESC &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &ext_power EP_OFF
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans
    &kp RA(LBKT) &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &kp RA(RBKT)
-                          	        &kp LGUI  &trans &kp SPACE                   &kp RET &trans &kp RALT
+                        &kp LGUI  &trans &kp SPACE                               &kp RET &trans &kp RALT
                         >;
                 };
    };
