@@ -75,15 +75,15 @@
                 adjust_layer {
                     label = "ADJ";
 // -----------------------------------------------------------------------------------------
-// |  ESC |     |     |     |     |     |   |     |     |     |     |     |powerOFF|
+// |      |     |     |     |     |     |   |     |     |     |     |     |powerOFF|
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |volDN|volUP|     |     |      |
 // | [    |     |     |     |     |     |   |     |     |     |     |     |  ]   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp ESC &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &ext_power EP_OFF
+   &trans &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &ext_power EP_OFF
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans
    &kp RA(LBKT) &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &kp RA(RBKT)
-                        &kp LGUI  &trans &kp SPACE                               &kp RET &trans &kp RALT
+                              &trans &trans &trans                               &trans &trans &trans 
                         >;
                 };
    };
