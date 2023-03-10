@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include "keymap_spanish.h"
 
 // Layer aliases
 #define DEF 0
@@ -32,12 +33,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// |(SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT)|
+// |(SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | SHFT)|
 //                    | GUI | LWR | SPC |   | ENT | RSE  |BKSP |
                         bindings = <
 &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U &kp I &kp O &kp P &kp BSPC
-&kp LCTRL &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
-&mt LSHIFT STAR &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA &kp DOT &kp FSLH &mt RSHIFT LPAR
+&kp LCTRL &kp A &kp S &kp D &kp F &kp G         &kp H &kp J &kp K &kp L &kp ES_NTIL &kp SQT
+&mt LSHIFT STAR &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA &kp DOT &kp ES_MINS &mt RSHIFT LPAR
                   &kp LGUI &mo 1 &kp SPACE      &kp RET &mo 2 &kp BKSP
                         >;
                 };
@@ -60,14 +61,14 @@
                 raise_layer {
                      label = "RAI";
 // -----------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// |   {  |PWROFF|    |     |     |     |   |  _  |  +  |  {  |  }  | "|" |   }  |
+// |  º   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  '  |  =  |  [  |  ]  |  \  |  `   |
+// |   {  |     |     |     |     |     |   |  ¿  |  ?  |  {  |  }  | "|" |   }  |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT           &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans &trans &trans &trans &trans                  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-   &kp RA(APOSTROPHE) &trans &trans &trans &trans &trans         &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp RA(BSLH)
+   &kp ES_MORD &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT       &kp ES_AMPR &kp ES_SLSH  &kp ES_LPRN &kp ES_RPRN &kp ES_EQL &kp BSPC
+   &kp LCTRL &trans &trans &trans &trans &trans                  &kp ES_QUOT &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+   &mt LSHIFT ES_LCBR &trans &trans &trans &trans &trans         &kp ES_QUES &kp ES_IQUE &kp LBRC &kp RBRC &kp PIPE &mt LSHIFT ES_RCBR
                     	     &kp LGUI &trans &kp SPACE           &kp RET &trans &kp RALT
                         >;
                 };
@@ -75,14 +76,14 @@
                 adjust_layer {
                     label = "ADJ";
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |powerOFF|
+// |      |     |     |  €   |     |     |   |     |     |    |    |    |powerOFF|
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |volDN|volUP|     |     |      |
 // | [    |     |     |     |     |     |   |     |     |     |     |     |  ]   |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &ext_power EP_OFF
+   &trans &trans &trans &kp ES_EURO &trans &trans                                    &trans &trans &trans &trans &trans &ext_power EP_OFF
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans
-   &kp RA(LBKT) &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &kp RA(RBKT)
+    &mt LSHIFT RA(LBKT) &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans  &mt LSHIFT RA(RBKT)
                               &trans &trans &trans                               &trans &trans &trans 
                         >;
                 };
